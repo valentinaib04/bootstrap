@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phineas y Ferb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+    /* VIDEO DE FONDO */
+    #bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120vh;
+        ;
+        object-fit: cover;
+        z-index: -1;
+        /* Lo manda atrás del contenido */
+        filter: brightness(0.45);
+        /* Lo oscureci para que el texto se vea */
+    }
+
+
+    .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="/video/Fondo.mp4" type="video/mp4">
+    </video>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#home">Phineas y Ferb</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#personajes">Personajes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#proceso">Proceso</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header id="home" class="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center">
+
+        <div class="container px-4">
+
+            <h1 class="fw-bold display-4 mb-4">
+                Phineas le pregunta a Ferb, estamos aburridos <br> ¿Qué podemos hacer hoy?
+            </h1>
+
+            <p class="lead fw-semibold mb-4">
+                Esta aventura gráfica te invita a una experiencia de elección y exploración.
+                Recorre los innovadores mundos y creaciones de Phineas y Ferb, donde cada sendero
+                conduce a una nueva sorpresa. Simultáneamente podrás investigar y desentrañar
+                el intrigante misterio detrás de su aparentemente normal mascota.
+            </p>
+
+    <!-- BOTONES -->
+<div class="d-flex justify-content-center gap-3 mt-3">
+    <a class="btn btn-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalAventura">
+        Iniciar aventura
+    </a>
+
+    <a href="#proceso" class="btn btn-outline-light btn-lg px-4">
+        Proceso de producción
+    </a>
+</div>
+
+    </header>
+    <!-- MODAL (afuera del header) -->
+<div class="modal fade" id="modalAventura" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title">Antes de comenzar…</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>¿Estás listo para iniciar la aventura?</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a href="p5/index.html" class="btn btn-primary">Comenzar</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+   
+    <section id="personajes" class="cards-bg text-light py-5 mt-5" style="
+        background-image: url('img/Fondo.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+    ">
+
+        <div class="container py-5">
+
+            <!-- TÍTULO ADENTRO DEL FONDO -->
+            <h1 class="text-center fw-bold mb-5" style="font-size: 3rem;">
+                Personajes principales
+            </h1>
+
+            <!--CARDS -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Phineas.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Phineas</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Ferb.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ferb</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Candace.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Candace</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Perry.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Perry</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --- FILA 2 --- -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Isabella.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Isabella</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Doofensh.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Doofenshmirtz</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Lawrence.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lawrence</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="ratio ratio-1x1">
+                            <img src="img/Linda.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Linda</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <style>
+            /* Ventana estilo macOS */
+            .window-header {
+                display: flex;
+                gap: 8px;
+                padding: 8px 15px;
+                background: #f5f5f7;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-bottom: 15px;
+            }
+
+            /* Para igualar la altura de todas las cards */
+            .equal-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: 20px !important;
+            }
+
+            /* Imagen con altura fija y sin deformarse */
+            .window-img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        </style>
+
+
+
+    </section>
+    <section id="proceso">
+
+    <h1 class="fw-bold text-center mb-5" style="font-size: 3rem;">
+        Proceso de producción
+    </h1>
+
+    <section class="container mt-5">
+
+        <!-- Fila con alturas iguales -->
+        <div class="row g-4 align-items-stretch">
+
+            <!-- Imagen estilo ventana -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <div class="window-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Tomato"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Yellow"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="SeaGreen"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                    </div>
+
+                    <img src="img/Diagrama.webp" class="img-fluid window-img" alt="Diagrama">
+                </div>
+            </div>
+
+            <!-- CARD de la derecha -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <h2 class="fw-bold mb-3">Diagrama de flujo</h2>
+
+                    <p class="text-secondary">
+                        La creación del Diagrama de Flujo fue un paso esencial para la validación de la
+                        arquitectura del sistema. Este proceso resultó fundamental para estructurar la lógica
+                        interna y garantizar la coherencia total del flujo de datos antes de iniciar la fase
+                        de codificación.
+                    </p>
+
+                    <a class="btn btn-dark btn-lg rounded-pill mt-auto"
+                        href="https://www.figma.com/board/VrT59YDcggieQ6iONgFooz/Untitled?node-id=0-1&t=oqb94tJZEWvWKgJ2-1">
+                        Ver en Figma →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+
+
+
+    <section class="container mt-5">
+        <div class="row g-4 align-items-stretch">
+
+            <!-- Imagen estilo ventana -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <div class="window-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Tomato"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Yellow"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="SeaGreen"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                    </div>
+
+                    <img src="img/Diseño.webp" class="img-fluid window-img" alt="Diseño">
+                </div>
+            </div>
+
+            <!-- CARD de la derecha -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <h2 class="fw-bold mb-3">Diseño de pantallas</h2>
+
+                    <p class="text-secondary">
+                        La fase de prototipado fue indispensable para sentar las bases de la interfaz y validar su
+                        usabilidad. Mediante este proceso, pudimos estructurar
+                        la navegación de manera eficiente y confirmar que se cumplieran los estándares de diseño y la
+                        consistencia visual requerida, facilitando una
+                        transición fluida hacia el código.
+                    </p>
+
+                    <a class="btn btn-dark btn-lg rounded-pill mt-auto"
+                        href="https://www.figma.com/design/K34JHKm7lMhF04X3pgi3S9/figma-phineas-y-ferb-TP-PROGRA?node-id=176-2&p=f&t=TwnVrvAgRIcAr7f2-0">
+                        Ver en Figma →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="container mt-5">
+
+        <div class="row g-4 align-items-stretch">
+            <!-- Imagen estilo ventana -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <div class="window-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Tomato"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="Yellow"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="SeaGreen"
+                            class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8" />
+                        </svg>
+                    </div>
+
+                    <img src="img/Codigo.webp" class="img-fluid window-img" alt="Codigo">
+                </div>
+            </div>
+
+            <!-- CARD de la derecha -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px;">
+                    <h2 class="fw-bold mb-3">Implementación</h2>
+
+                    <p class="text-secondary">
+                        Para la fase de desarrollo, la elección de p5.js y Processing fue fundamental para la
+                        visualización interactiva.
+                        Trabajamos con arrays como pilar de nuestra estructura de datos, lo cual nos permitió modelar
+                        con precisión las relaciones
+                        y estados de los componentes del proyecto. Esta arquitectura de codificación garantizó que el
+                        sistema mantuviera una gran
+                        capacidad de escalabilidad y un rendimiento fluido.
+                    </p>
+
+                    <a class="btn btn-dark btn-lg rounded-pill mt-auto"
+                        href="p5/index.html">
+                        Ver aventura →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <style>
+        /* Sección completa con imagen */
+        .about-section {
+            width: 100%;
+            background-image: url('img/fondo2.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            position: relative;
+            /* Necesario para el overlay */
+        }
+
+        /* Overlay oscuro SOLO para el fondo */
+        .about-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            /* Ajustá la oscuridad */
+            z-index: 1;
+        }
+
+        /* Contenedor del contenido (card + foto) */
+        .about-overlay {
+            position: relative;
+            z-index: 2;
+            /* Para estar POR ENCIMA del fondo oscuro */
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+          
+        }
+    </style>
+    <section class="about-section">
+        <div class="about-overlay">
+
+            <h1 class="fw-bold text-center mb-5" style="font-size: 3rem;">
+                ¿Quién estuvo detrás de la página?
+            </h1>
+
+            <div class="container my-4">
+                <div class="card shadow-sm border-0 rounded-4 overflow-hidden" style="max-width: 800px; margin: auto;">
+
+                    <div class="row g-0 align-items-center">
+
+                        <div class="col-md-4">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/val.webp" class="img-fluid w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+
+                        <div class="col-md-8 p-3">
+                            <p class="text-secondary mb-2" style="font-size: 0.95rem;">
+                                Soy Valentina, creadora y desarrolladora de esta página web y de la aventura gráfica.
+                                Me apasiona el diseño digital y la programación creativa.
+                            </p>
+
+                            <p class="text-secondary mb-2" style="font-size: 0.95rem;">
+                                Diseñé pantallas, hice prototipos en Figma, ilustraciones y programé usando
+                                Bootstrap, p5.js y Processing.
+                            </p>
+
+                            <p class="text-secondary mb-0" style="font-size: 0.95rem;">
+                                Me encanta combinar creatividad y tecnología para crear experiencias que inspiren.
+                                <br>¡Gracias por explorar mi trabajo!
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="mt-5 w-100" style="background:#ffffff; padding:30px 0; border-top: 1px solid #ddd;">
+        <div class="container text-center">
+
+            <h6 class="fw-bold mb-2" style="color:#333;">
+                © 2025 • Sitio creado por Valentina Ibazeta
+            </h6>
+
+            <p class="mb-0" style="font-size:0.9rem; color:#666;">
+                Proyecto final • Diseño, ilustración y desarrollo en Bootstrap, p5.js y Processing
+            </p>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
